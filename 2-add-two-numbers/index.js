@@ -21,6 +21,25 @@ Explanation: 342 + 465 = 807.
  * @param {ListNode} l2
  * @return {ListNode}
  */
-var addTwoNumbers = function(l1, l2) {
 
+function ListNode(val) {
+   this.val = val;
+   this.next = null;
+}
+var addTwoNumbers = function(l1, l2) {
+  var carry = 0; // carry存放进位
+  var result = new ListNode(), temp = new ListNode();
+  result.next = temp; // 主要是想用 result 记录结果链表的表头
+  var v1 = l1, v2 = l2;
+  while(v1 || v2) {
+    var sum = (v1 ? v1.val : 0) + (v2 ? v2.val : 0) + carry;
+    carry = sum > 9 ? 1 : 0;
+    temp.val = sum - carry * 10; // 某一位上最终值
+    temp.next = (v1 ? v1.next : null) ||
+      (v2 ? v2.next : null) ? (new ListNode()) : (carry==1?(new ListNode(1)) : null);
+    temp = temp.next ? temp.next : null;
+    v1 = v1 ? (v1.next ? v1.next : null) : null;
+    v2 = v2 ? (v2.next ? v2.next : null) : null;
+  };
+  return result.next;
 };
