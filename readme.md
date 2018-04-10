@@ -7,3 +7,4 @@
 | 3. Longest Substring Without Repeating Characters | Medium |[Tap here](./3-longest-substring/index.js) |
 | 4. Median of Two Sorted Arrays | Hard |[Tap here](./4-median-of-two-sorted-arrays/index.js)|
 | 5. Longest Palindromic Substring | Medium |[Tap here](./5-longest-palindromic-substring/index.js)|
+| 6. ZigZag Conversion | Medium |[Tap here](./6-zigzag-conversion/index.js)|
