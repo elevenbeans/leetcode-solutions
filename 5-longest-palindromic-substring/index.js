@@ -17,26 +17,26 @@ Note: "aba" is also a valid answer.
 
 // manacher
 var longestPalindrome = function(s) {
-  var t = s.split('').join('#');
-  var c = 1, e = 0, cs = 0;
-  t = `~${t}#`;
+  var newStr = s.split('').join('#');
+  var len = 1, maxLen = 0, centerIndex = 0;
+  newStr = `~${newStr}#`;
   // j 为目标串的中间点
-  for (var j = 1, lenj = t.length - 1; j < lenj; j++, c = 1) {
-    while (t[j + c] === t[j - c]) {
-      c++;
+  for (var j = 1, lenj = newStr.length - 1; j < lenj; j++, len = 1) {
+    while (newStr[j + len] === newStr[j - len]) {
+      len++;
     }
-    if (c > e) { // 如果找到更长的
-      e = c; // 保留当前长度
-      cs = j; // 保留中点
+    if (len > maxLen) { // 如果找到更长的
+      maxLen = len; // 保留当前长度
+      centerIndex = j; // 保留中点
     }
   }
-  var result = t.slice(cs - e + 1, cs + e).replace(/#/g, '').replace(/~/g, '');
+  var result = newStr.slice(centerIndex - maxLen + 1, centerIndex + maxLen).replace(/#/g, '').replace(/~/g, '');
   return result;
 };
 
-// console.log(longestPalindrome('bb')); // bb
- console.log(longestPalindrome('cbbd')); // bb
-// console.log(longestPalindrome('babad')); // aba bab
-// console.log(longestPalindrome('abcba')); // bcb
-// console.log(longestPalindrome('abcda')); // a
-// console.log(longestPalindrome('abadd')); // aba
+console.log(longestPalindrome('bb')); // bb
+console.log(longestPalindrome('cbbd')); // bb
+console.log(longestPalindrome('babad')); // aba bab
+console.log(longestPalindrome('abcba')); // bcb
+console.log(longestPalindrome('abcda')); // a
+console.log(longestPalindrome('abadd')); // aba
