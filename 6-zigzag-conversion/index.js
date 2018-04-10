@@ -18,5 +18,45 @@ convert("PAYPALISHIRING", 3) should return "PAHNAPLSIIGYIR".
  * @return {string}
  */
 var convert = function(s, numRows) {
-
+  var i = 0;
+  var arr = [];
+  var count = 1;
+  while(i < s.length) {
+    if( count % 2 !== 0 ) {
+      arr.push(s.substring(i, i + numRows));
+      // swt = false;
+      i += numRows;
+      count++;
+    } else {
+      if (i % (2*(numRows-1)) === 0) {
+        count++;
+      } else {
+        var temp = s.split('')[i];
+        // temp = temp + ;
+        arr.push(temp);
+        i++;
+      }
+    }
+  }
+  return arr;
 };
+// 2-2
+// 3-4
+// 4-6
+// 5-8
+// 6-10
+//
+
+// 0    6    12
+// 1  5 7   11
+// 2 4  8 10
+// 3    9
+
+
+// 0     8      16
+// 1   7 9    15
+// 2  6 10  14
+// 3 5  11 13
+// 4    12
+
+console.log(convert('PAYALISHIRING', 3));
