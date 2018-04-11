@@ -8,3 +8,4 @@
 | 4. Median of Two Sorted Arrays | Hard |[Tap here](./4-median-of-two-sorted-arrays/index.js)|
 | 5. Longest Palindromic Substring | Medium |[Tap here](./5-longest-palindromic-substring/index.js)|
 | 6. ZigZag Conversion | Medium |[Tap here](./6-zigzag-conversion/index.js)|
+| 7. Reverse Integer | Easy |[Tap here](./7-reverse-integer/index.js)|
