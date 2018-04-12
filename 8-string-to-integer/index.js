@@ -12,8 +12,39 @@ Notes: It is intended for this problem to be specified vaguely (ie, no given inp
  */
 var myAtoi = function(str) {
   // to do
-  var patt = /^\d|+|-$/;
-  return (patt.test(str) || !str )? 0 : parseInt(str);
+  var re = /\d/;
+  var res = [];
+  str = str.split('');
+  for(var i = 0; i < str.length; i++) {
+    if(res.length == 0) {
+      if(str[i] === '+' || str[i] === '-' || re.test(str[i])) {
+        res.push(str[i]);
+      }
+    } else {
+      if(re.test(str[i])) {
+        res.push(str[i]);
+      } else if (str[i-1] === '+' || str[i-1] == '-') {
+        res = [];
+        break;
+      } else {
+        break;
+      }
+    }
+  };
+  if (res.length === 0) return 0;
+  if (res.length === 1 && !re.test(res[0])) return 0;
+  // return res;
+  return parseInt(res.join(''));
 };
 
-console.log(myAtoi('12312312'));
+console.log(myAtoi(''));
+console.log(myAtoi('-'));
+console.log(myAtoi('+'));
+console.log(myAtoi('++'));
+console.log(myAtoi('+-2'));
+console.log(myAtoi('1'));
+console.log(myAtoi('2147483648'));
+console.log(myAtoi('-0012a42'));
+console.log(myAtoi('12312312+-'));
+console.log(myAtoi('*&^12312312'));
+console.log(myAtoi('+1231#$#2312'));
