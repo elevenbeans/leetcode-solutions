@@ -9,4 +9,6 @@
 | 5. Longest Palindromic Substring | Medium |[Tap here](./5-longest-palindromic-substring/index.js)|
 | 6. ZigZag Conversion | Medium |[Tap here](./6-zigzag-conversion/index.js)|
 | 7. Reverse Integer | Easy |[Tap here](./7-reverse-integer/index.js)|
-| 7. String to Integer | Medium |[Tap here](./8-string-to-integer/index.js)|
+| 8. String to Integer | Medium |[Tap here](./8-string-to-integer/index.js)|
+| 9. Palindrome number | Easy |[Tap here](./9-palindrome-number/index.js)|
+| 10. Regular Expression Matching | Hard |[Tap here](./10-regular-expression-matching/index.js)|
