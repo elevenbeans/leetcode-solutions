@@ -41,5 +41,7 @@ var intToRoman = function(num) {
 
 console.log(intToRoman(0));
 console.log(intToRoman(1));
+console.log(intToRoman(14));
 console.log(intToRoman(233));
 console.log(intToRoman(1233));
+console.log(intToRoman(2233));
