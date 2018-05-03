@@ -15,3 +15,4 @@
 | 11. Container With Most Water | Medium |[Tap here](./11-container-with-most-water/index.js)|
 | 12. Integer To Roman | Medium |[Tap here](./12-integer-to-roman/index.js)|
 | 13. Roman To Integer | Medium |[Tap here](./13-roman-to-integer/index.js)|
+| 14. Longest Common Prefix | Easy |[Tap here](./14-longest-common-prefix/index.js)|
